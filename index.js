@@ -1,8 +1,12 @@
 
 var katzDeliLine = [];
-function takeANumber(katzDeliLine, name) {
-    katzDeliLine.push(name)
-    return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+var n = katzDeliLine.length
+
+function takeANumber(katzDeliLine) {
+    n++
+    katzDeliLine.push(n)
+//    n = 1, 
+    return `You are ticket number ${n}. You are number ${katzDeliLine.length} in line.`
   }
 
 function nowServing(katzDeliLine) {
@@ -14,10 +18,9 @@ function nowServing(katzDeliLine) {
  }
 }
 
-
 //if people "The line is currently: 1. Ada, 2. Grace"
 //if not "The line is currently empty."
-function currentLine(katzDeliLine){
+function currentLine(katzDeliLine) {
   var line = "The line is currently: "
 //using line as a string var
   var i;
